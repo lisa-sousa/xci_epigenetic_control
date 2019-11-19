@@ -1,9 +1,6 @@
 # Using Machine Learning to understand gene silencing dynamics during X-chromosome inactivation.
 
 
-### Abstract
-
-
 ### Content
 
 This contains all data sources and scripts that were used to perform all analysis my thesis, based on the analysis for the paper (the paper has a seperate repositoty on the marsicoLab page).
