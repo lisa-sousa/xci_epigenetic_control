@@ -68,7 +68,7 @@ table_pro_seq = rbind(table_pro_seq, data.frame(halftime = not_silenced, silenci
 
 
 ####load marks data
-load(here('data/modelling/feature_matrix','promoter_matrix_reannotated_normRAdjusted_pro_seq_genes.RData'))
+load(here('data/modelling/feature_matrix','promoter_pro_seq_genes_epigenetic.RData'))
 table_halftimes = data.frame(gene = rownames(data_set), halftime = halftime)
 
 table_marks_paper = read.table(file = here('data/annotation_files/silencing_classes','silencing_classes_marks.txt'),sep='\t',header = F)
@@ -82,7 +82,7 @@ table_marks$source = "Differentiating mESCs"
 
 
 ####load borenzstein
-load(here('data/modelling/feature_matrix','promoter_matrix_reannotated_normRAdjusted_pro_seq_genes.RData'))
+load(here('data/modelling/feature_matrix','promoter_pro_seq_genes_epigenetic.RData'))
 table_halftimes = data.frame(gene = rownames(data_set), halftime = halftime)
 
 table_NSMB_paper = read.table(file = here('data/annotation_files/silencing_classes','silencing_classes_borensztein.txt'))

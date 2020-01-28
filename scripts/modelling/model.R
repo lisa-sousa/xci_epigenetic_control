@@ -30,9 +30,9 @@ source(here("scripts/modelling","model_functions.R"))
 output_directory_plots = 'plots/modelling'
 output_directory_data = 'data/modelling/model'
 
-file_feature_matrix = here("data/modelling/feature_matrix","promoter_matrix_reannotated_normRAdjusted_pro_seq_genes.RData")
+file_feature_matrix = here("data/modelling/feature_matrix","promoter_pro_seq_genes_epigenetic.RData")
 file_high_confidence_escapees = here("data/annotation_files/escapees","escapees.RData")
-file_feature_matrix_predictions = here("data/modelling/feature_matrix","promoter_matrix_reannotated_normRAdjusted_all_chrX_genes.RData")
+file_feature_matrix_predictions = here("data/modelling/feature_matrix","promoter_all_genes_epigenetic.RData")
 file_gene_annotation = here("data/annotation_files/gene_annotation","gencode.vM9.annotation.chrX.genes.reannotated.with.rr.bed")
 file_SNPs = here("data/annotation_files/SNPs","gencode.vM9.annotation.SNP.count.bed")
 file_RPKM = here("data/silencing_halftimes/raw_data","GSE121144_PROseq.xlsx")

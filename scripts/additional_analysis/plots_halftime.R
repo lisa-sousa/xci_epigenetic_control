@@ -73,7 +73,7 @@ ggplot(data=halftimes_table,aes(x=TSS,y=halftime)) +
   theme_minimal(base_family = "Source Sans Pro") + 
   theme(panel.grid.minor = element_blank(), panel.grid.major.x = element_blank(), axis.ticks.x=element_line(color="grey"),axis.text=element_text(size=8), axis.title=element_text(size=8), 
         axis.text.x = element_text(hjust=c(0,0.5,1)),legend.text = element_text(size=8),legend.position = "top") +
-  scale_x_continuous(limits=c(0,max(halftimes_table$TSS)),breaks=c(0,max(halftimes_table$TSS)/2,max(halftimes_table$TSS)),name='genomic position [x10⁸]',
+  scale_x_continuous(limits=c(0,max(halftimes_table$TSS)),breaks=c(0,max(halftimes_table$TSS)/2,max(halftimes_table$TSS)),name='genomic position Chr X [x10⁸]',
                      labels = c(0,round((max(halftimes_table$TSS)/2)/1e+08,2),round((max(halftimes_table$TSS))/1e+08,2))) +
   scale_y_continuous(limits=c(0,3.6),breaks=c(0,1,2,3,3.5), label=c("0","1","2","3",">3.5"), name='half-time [days]') +
   scale_colour_manual(name='', values=c('gene'='#666666', 'running median'='#2c5aa0', guide='legend')) +

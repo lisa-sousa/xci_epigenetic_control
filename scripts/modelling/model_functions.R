@@ -323,7 +323,7 @@ get_best_rf <- function(data_set,target,ntree,mtry,sampsize,thr_class_error,runs
 #bxoplot with average feature importance over x Random Forests
 plot_feature_importance <- function(output_directory_plots_thr, random_forest_model, class0_label, class1_label){
   
-  cairo_pdf(file = paste(output_directory_plots_thr,'feature_importance.pdf',sep=''), width = 10, height = 5,onefile = T)
+  cairo_pdf(file = paste(output_directory_plots_thr,'feature_importance.pdf',sep=''), width = 5, height = 4,onefile = T)
   
   fill = 'lightgrey'
   line = 'black'
@@ -342,10 +342,10 @@ plot_feature_importance <- function(output_directory_plots_thr, random_forest_mo
   gg_box0 = ggplot(melt(t(meanImpClass0_plot)[,n:1]), aes(x=Var2,y=value)) + 
     geom_boxplot(fill="white",colour = "#4d4d4d",alpha = 0.7,outlier.size=0.2,lwd=0.4) +
     ggtitle(paste("feature importance",class0_label)) +
-    scale_y_continuous(name = "mean decrease in accuracy",limits=c(-5, 30)) +
+    scale_y_continuous(name = "mean decrease in accuracy",limits=c(-5, 10)) +
     scale_x_discrete(name="") + coord_flip() +
     theme_minimal(base_family = "Source Sans Pro") +
-    theme(panel.grid.minor = element_blank(),axis.text.x = element_text(size=8), axis.text.y = element_text(size=8), 
+    theme(panel.grid.minor = element_blank(),axis.text.x = element_text(size=8), axis.text.y = element_text(size=6), 
           axis.title=element_text(size=8),plot.title = element_text(size=8,hjust=0.5)) 
 
   
@@ -362,10 +362,10 @@ plot_feature_importance <- function(output_directory_plots_thr, random_forest_mo
   gg_box1 = ggplot(melt(t(meanImpClass1_plot)[,n:1]), aes(x=Var2,y=value)) + 
     geom_boxplot(fill="white",colour = "#4d4d4d",alpha = 0.7,outlier.size=0.2,lwd=0.4) +
     ggtitle(paste("feature importance",class1_label)) +
-    scale_y_continuous(name = "mean decrease in accuracy",limits=c(-5, 30)) +
+    scale_y_continuous(name = "mean decrease in accuracy",limits=c(-5, 10)) +
     scale_x_discrete(name="") + coord_flip() +
     theme_minimal(base_family = "Source Sans Pro") +
-    theme(panel.grid.minor = element_blank(),axis.text.x = element_text(size=8), axis.text.y = element_text(size=8), 
+    theme(panel.grid.minor = element_blank(),axis.text.x = element_text(size=8), axis.text.y = element_text(size=6), 
           axis.title=element_text(size=8),plot.title = element_text(size=8,hjust=0.5)) 
   
   grid.arrange(gg_box0,gg_box1,ncol=2,widths=c(4,4))

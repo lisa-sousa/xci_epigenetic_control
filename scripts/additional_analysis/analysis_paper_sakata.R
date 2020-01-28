@@ -5,13 +5,14 @@
 library(Cairo)
 library(ggplot2)
 library(here)
+library(reshape2)
 
 ###################################################################################
 #directories and files
 ###################################################################################
 
 CAGdelta5_file = here("data/annotation_files/xist_mutants_sakata","GSE93031_allelic_expression.txt")
-model_matrix_file = here("data/modelling/feature_matrix","promoter_matrix_reannotated_normRAdjusted_pro_seq_genes.RData")
+model_matrix_file = here("data/modelling/feature_matrix/promoter_pro_seq_genes_epigenetic.RData")
 clustering_matrix = here("data/modelling/model/silencing_dynamics_model/results_thr_0.5_0.9_1.3","best_clustering_data_set_k3.RData")
 output_dir = here("plots/additional_analysis/")
 
